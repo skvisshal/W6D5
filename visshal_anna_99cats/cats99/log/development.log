@@ -1322,3 +1322,104 @@ NameError - undefined local variable or method `birth_date' for #<#<Class:0x0000
   app/controllers/cats_controller.rb:15:in `new'
 
 Started POST "/__better_errors/152c94cc952404b4/variables" for ::1 at 2021-11-12 16:55:21 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:57:15 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.1ms)
+  Rendered cats/new.html.erb within layouts/application (148.1ms)
+Completed 200 OK in 1557ms (Views: 1399.0ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:57:27 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Bud", "birth_date"=>"2021-11-02", "color"=>"blue", "sex"=>"F", "description"=>"what's his color?"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[36mCat Create (1.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2021-11-02"], ["color", "blue"], ["name", "Bud"], ["sex", "F"], ["description", "what's his color?"], ["created_at", "2021-11-12 21:57:27.823591"], ["updated_at", "2021-11-12 21:57:27.823591"]]
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:21
+Redirected to http://localhost:3000/cats/3
+Completed 302 Found in 27ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/cats/3" for ::1 at 2021-11-12 16:57:27 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 593ms (Views: 582.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:57:35 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 517ms (Views: 513.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:58:58 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 524ms (Views: 522.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/2" for ::1 at 2021-11-12 16:59:00 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 488ms (Views: 482.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:59:03 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.3ms)
+  Rendered cats/new.html.erb within layouts/application (141.2ms)
+Completed 200 OK in 652ms (Views: 649.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:59:16 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Kev", "birth_date"=>"2021-09-08", "color"=>"white", "sex"=>"M", "description"=>"TA"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2021-09-08"], ["color", "white"], ["name", "Kev"], ["sex", "M"], ["description", "TA"], ["created_at", "2021-11-12 21:59:16.574422"], ["updated_at", "2021-11-12 21:59:16.574422"]]
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:21
+Redirected to http://localhost:3000/cats/4
+Completed 302 Found in 19ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/cats/4" for ::1 at 2021-11-12 16:59:16 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 464ms (Views: 459.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:59:24 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 463ms (Views: 460.8ms | ActiveRecord: 0.6ms)
+
+
