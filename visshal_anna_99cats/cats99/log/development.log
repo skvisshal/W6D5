@@ -910,3 +910,415 @@ Processing by CatsController#new as HTML
 Completed 200 OK in 697ms (Views: 695.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/cats" for ::1 at 2021-11-12 16:18:34 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 1748ms (Views: 1575.2ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:18:41 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 538ms (Views: 534.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:18:43 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.0ms)
+  Rendered cats/new.html.erb within layouts/application (140.9ms)
+Completed 200 OK in 689ms (Views: 686.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:18:59 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/3e08ae979dcd06cf/variables" for ::1 at 2021-11-12 16:18:59 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:20:31 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 601ms (Views: 598.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:20:33 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.4ms)
+  Rendered cats/new.html.erb within layouts/application (173.5ms)
+Completed 200 OK in 742ms (Views: 737.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:20:50 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.7ms)
+  Rendered cats/new.html.erb within layouts/application (150.8ms)
+Completed 200 OK in 1753ms (Views: 1605.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:21:43 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 620ms (Views: 618.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:21:47 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (2.0ms)
+  Rendered cats/new.html.erb within layouts/application (163.8ms)
+Completed 200 OK in 738ms (Views: 736.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:21:58 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/a7f8a49b9bb9a4f0/variables" for ::1 at 2021-11-12 16:21:59 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:23:00 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 527ms (Views: 525.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:23:03 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.1ms)
+  Rendered cats/new.html.erb within layouts/application (153.1ms)
+Completed 200 OK in 630ms (Views: 628.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:24:05 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 319ms (Views: 318.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:24:07 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 592ms (Views: 589.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:24:13 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 514ms (Views: 512.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:24:15 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.9ms)
+  Rendered cats/new.html.erb within layouts/application (161.5ms)
+Completed 200 OK in 679ms (Views: 677.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:24:36 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/2125fd09011f2050/variables" for ::1 at 2021-11-12 16:24:36 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:24:48 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:24:56 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:25:11 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:25:33 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:25:37 -0500
+Started POST "/__better_errors/2125fd09011f2050/variables" for ::1 at 2021-11-12 16:25:51 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:26:11 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:26:31 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:26:39 -0500
+Started POST "/__better_errors/2125fd09011f2050/eval" for ::1 at 2021-11-12 16:26:44 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:28:11 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.9ms)
+  Rendered cats/new.html.erb within layouts/application (153.4ms)
+Completed 200 OK in 714ms (Views: 712.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:28:41 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (2.1ms)
+  Rendered cats/new.html.erb within layouts/application (158.3ms)
+Completed 200 OK in 694ms (Views: 693.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:29:10 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/d2191ebc60e95176/variables" for ::1 at 2021-11-12 16:29:10 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:33:27 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 1568ms (Views: 1406.4ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:33:30 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.7ms)
+  Rendered cats/new.html.erb within layouts/application (161.7ms)
+Completed 200 OK in 666ms (Views: 664.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:33:42 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/3465d824080d1866/variables" for ::1 at 2021-11-12 16:33:42 -0500
+Started POST "/__better_errors/3465d824080d1866/eval" for ::1 at 2021-11-12 16:34:08 -0500
+Started POST "/__better_errors/3465d824080d1866/eval" for ::1 at 2021-11-12 16:34:10 -0500
+Started POST "/__better_errors/3465d824080d1866/eval" for ::1 at 2021-11-12 16:34:12 -0500
+Started POST "/__better_errors/3465d824080d1866/eval" for ::1 at 2021-11-12 16:34:24 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:35:30 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.4ms)
+  Rendered cats/new.html.erb within layouts/application (147.3ms)
+Completed 200 OK in 652ms (Views: 649.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:35:45 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/c84fef8d07def914/variables" for ::1 at 2021-11-12 16:35:45 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:38:36 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.9ms)
+  Rendered cats/new.html.erb within layouts/application (128.6ms)
+Completed 200 OK in 1507ms (Views: 1346.8ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:38:45 -0500
+Processing by CatsController#create as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/6025223005b2fccc/variables" for ::1 at 2021-11-12 16:38:46 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:41:07 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.4ms)
+  Rendered cats/new.html.erb within layouts/application (150.2ms)
+Completed 200 OK in 1756ms (Views: 1569.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:42:08 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (2.0ms)
+  Rendered cats/new.html.erb within layouts/application (157.4ms)
+Completed 200 OK in 642ms (Views: 639.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:48:39 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 622ms (Views: 618.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:48:41 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.9ms)
+  Rendered cats/new.html.erb within layouts/application (140.9ms)
+Completed 200 OK in 553ms (Views: 551.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:48:51 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat_color"=>"", "gender"=>"M"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat:
+  app/controllers/cats_controller.rb:32:in `cat_param'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/35a95078b5056e39/variables" for ::1 at 2021-11-12 16:48:51 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:51:05 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 608ms (Views: 603.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:51:06 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.4ms)
+  Rendered cats/new.html.erb within layouts/application (151.1ms)
+Completed 200 OK in 654ms (Views: 651.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:51:19 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Harry", "birth_date"=>"2021-11-08", "color"=>"", "sex"=>"M", "description"=>"what's his color?"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.4ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"cats", :id=>nil}, missing required keys: [:id]:
+  app/controllers/cats_controller.rb:22:in `create'
+
+Started POST "/__better_errors/fb794027b8842ef8/variables" for ::1 at 2021-11-12 16:51:20 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:54:22 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (2.4ms)
+  Rendered cats/new.html.erb within layouts/application (118.8ms)
+Completed 200 OK in 530ms (Views: 528.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2021-11-12 16:54:29 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Harry", "birth_date"=>"2021-11-02", "color"=>"blue", "sex"=>"M", "description"=>"what's his color?"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[36mCat Create (5.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2021-11-02"], ["color", "blue"], ["name", "Harry"], ["sex", "M"], ["description", "what's his color?"], ["created_at", "2021-11-12 21:54:29.463570"], ["updated_at", "2021-11-12 21:54:29.463570"]]
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:21
+Redirected to http://localhost:3000/cats/2
+Completed 302 Found in 22ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/cats/2" for ::1 at 2021-11-12 16:54:29 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 603ms (Views: 482.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 16:54:39 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 539ms (Views: 537.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/2" for ::1 at 2021-11-12 16:54:41 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 488ms (Views: 480.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:55:19 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (660.8ms)
+  Rendered cats/new.html.erb within layouts/application (817.9ms)
+Completed 500 Internal Server Error in 1170ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `birth_date' for #<#<Class:0x00007f61b8210d38>:0x00007f61c0212950>:
+  app/views/cats/_form.html.erb:6:in `_app_views_cats__form_html_erb___2455025889268178543_70028905871760'
+  app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___1465503400262439369_70028905974580'
+  app/controllers/cats_controller.rb:15:in `new'
+
+Started POST "/__better_errors/152c94cc952404b4/variables" for ::1 at 2021-11-12 16:55:21 -0500

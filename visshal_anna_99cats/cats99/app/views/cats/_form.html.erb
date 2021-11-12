@@ -1,25 +1,38 @@
 <form action="<%= cats_url %>" method='post'>
     <label for="name"> Name </label> 
-    <input type='text' id='cat_name' value='<%= cat.name %>'>  
+    <input type='text' id='cat_name' name = "cat[name]" value='<%= cat.name %>'>  
+
 
     <label for="birth_date"> Birthday</label> 
-    <input type='date' id='cat_date' value='<%= cat.birth_date %>'>  
+    <input type='date' id='cat_date' name = "cat[birth_date]" value='<%= cat.birth_date %>'>  
+
 
     <label for="color"> Color </label> 
-        <select id='cat_color'>
+        <select name='cat[color]' id='cat_color'>
         <option disabled selected> Select a color: </option>
         <% Cat::COLORS.each do |color| %>
-           <option <%= color %> value= <%= cat.color %>></option>
+           <option value='<%= color %>'> <%=color%> </option>
         <% end %>
         </select>
 
-    <input type = "radio" id = cat_sex_M <%= cat.sex = 'M' %>>
-    <label for= 'cat_sex_male'> Male </label>
-    <input type = "radio" id = cat_sex_F <%= cat.sex = 'F' %>>
-    <label for= 'cat_sex_female'> Female </label>
+
+    <p> Select a gender </p>
+        <div>
+        <input type = "radio" id = cat_sex_M name = "cat[sex]" value = "M"<%= cat.sex == 'M' ? "checked" : "" %>>
+        <label for= 'cat_sex_male'> Male </label>
+        </div>
+
+        <div>
+        <input type = "radio" id = cat_sex_F name = "cat[sex]" value = "F" <%= cat.sex == 'F' ? "checked" : "" %>>
+        <label for= 'cat_sex_female'> Female </label>
+        </div>
   
+
+
     <label for= "description"> Description </label>
-    <input type='text' id='cat_descrption' value='<%= cat.description %>'>  
+    <input type='text' id='cat_descrption' name = cat[description] value='<%= cat.description %>'>  
 
     <input type = 'submit' value='<%= 'Create cat' %>'> 
+    <%= p cat %>
+    <%= p cat.name %>
     </form>
