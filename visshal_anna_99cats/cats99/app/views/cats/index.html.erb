@@ -1,0 +1,17 @@
+<h1>All the Cats</h1>
+
+<dl>
+    <% @cats.each do |kitty| %>
+        <dt>Name:</dt>
+        <dd><%= kitty.name %></dd>
+        <dt>Birth Date:</dt>
+        <dd><%= kitty.birth_date %></dd>
+        <dt>Color:</dt>
+        <dd><%= kitty.color %></dd>
+        <dt>Sex:</dt>
+        <dd><%= kitty.sex %></dd>
+        <dt>Description:</dt>
+        <dd><%= kitty.description %></dd>
+        <dt>---------------------------</dt>
+    <% end %>
+</dl>
