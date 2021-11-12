@@ -26,6 +26,12 @@ class CatsController < ApplicationController
     def destroy
     end
 
+    def update
+         @cat = Cat.find(params[:id])
+         @cat.update_attributes(cat_param)
+         redirect_to cat_url(@cat)
+    end
+
     private
 
     def cat_param

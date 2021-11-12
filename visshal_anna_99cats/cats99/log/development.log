@@ -1423,3 +1423,144 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 463ms (Views: 460.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/cats" for ::1 at 2021-11-12 17:01:49 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/visshal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (5.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 395ms (Views: 373.5ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/cats" for ::1 at 2021-11-12 17:18:52 -0500
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/visshal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (181.4ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 17.4ms)
+
+
+
+NameError - undefined local variable or method `edit_cat_url' for #<#<Class:0x00007fb648e93a80>:0x00007fb648ef2620>:
+  app/views/cats/index.html.erb:13:in `_app_views_cats_index_html_erb___492241699649651419_70210442266740'
+  app/controllers/cats_controller.rb:5:in `index'
+
+Started POST "/__better_errors/99968c0befefa680/variables" for ::1 at 2021-11-12 17:18:52 -0500
+Started POST "/__better_errors/99968c0befefa680/variables" for ::1 at 2021-11-12 17:19:32 -0500
+Started GET "/cats" for ::1 at 2021-11-12 17:19:49 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (6.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 114ms (Views: 106.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/cats/1" for ::1 at 2021-11-12 17:19:52 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 115ms (Views: 31.2ms | ActiveRecord: 62.8ms)
+
+
+Started GET "/cats/1" for ::1 at 2021-11-12 17:20:10 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (220.8ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `edit_cat_url' for #<#<Class:0x00007fb648e93a80>:0x00007fb62c349a88>:
+  app/views/cats/show.html.erb:20:in `_app_views_cats_show_html_erb__1907146244273943041_70210201207760'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/924ad0bcea27fc3e/variables" for ::1 at 2021-11-12 17:20:10 -0500
+Started GET "/cats/1" for ::1 at 2021-11-12 17:22:34 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (215.9ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 27.4ms)
+
+
+
+NameError - undefined local variable or method `update_cat_url' for #<#<Class:0x00007fb629694df8>:0x00007fb62968c018>:
+  app/views/cats/show.html.erb:20:in `_app_views_cats_show_html_erb__1907146244273943041_70210177726520'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/5b57ab9a88457d7e/variables" for ::1 at 2021-11-12 17:22:34 -0500
+Started GET "/cats/1" for ::1 at 2021-11-12 17:23:00 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/visshal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (156.4ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 23.6ms)
+
+
+
+NameError - undefined local variable or method `update_cat_url' for #<#<Class:0x00007fd721e28e70>:0x00007fd721e5a498>:
+  app/views/cats/show.html.erb:20:in `_app_views_cats_show_html_erb__1492893478707788532_70281244232940'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/7cf0ab9e416fe3d5/variables" for ::1 at 2021-11-12 17:23:01 -0500
+Started GET "/cats/1" for ::1 at 2021-11-12 17:23:04 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (212.6ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `update_cat_url' for #<#<Class:0x00007fd721e28e70>:0x00007fd7415551e8>:
+  app/views/cats/show.html.erb:20:in `_app_views_cats_show_html_erb__1492893478707788532_70280999673660'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/c0619418f4e5f6ca/variables" for ::1 at 2021-11-12 17:23:04 -0500
+Started GET "/cats" for ::1 at 2021-11-12 17:26:17 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/visshal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 122ms (Views: 104.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2021-11-12 17:26:19 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (94.3ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 3.5ms)
+
+
+
+NoMethodError - undefined method `edit_cat_url' for #<#<Class:0x00007fc2a7b7b288>:0x00007fc286bfaa40>:
+  app/views/cats/show.html.erb:20:in `_app_views_cats_show_html_erb__129216843212021506_70236951772960'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/8e15afc4a3584943/variables" for ::1 at 2021-11-12 17:26:19 -0500

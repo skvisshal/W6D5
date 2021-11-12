@@ -1,0 +1,40 @@
+<form action="<%= cat_url(cat) %>" method='post'>
+    <input type="hidden" name="_method" value="patch">
+
+    <label for="name"> Name </label> 
+    <input type='text' id='cat_name' name = "cat[name]" value = "<%= cat.name %>">  
+    
+
+
+    <label for="birth_date"> Birthday</label> 
+    <input type='date' id='cat_date' name = "cat[birth_date]" value = "<%= cat.birth_date %>">  
+
+
+    <label for="color"> Color </label> 
+        <select name='cat[color]' id='cat_color'>
+        <option disabled selected> Select a color: </option>
+        <% Cat::COLORS.each do |color| %>
+           <option value='<%= color %>' <%= cat.color == color ? "selected" : "" %>>> <%=color%> </option>
+        <% end %>
+        </select>
+
+
+    <p> Select a gender </p>
+        <div>
+        <input type = "radio" id = cat_sex_M name = "cat[sex]" value = "M" <%= cat.sex == "M" ? "checked" : "" %>>
+        <label for= 'cat_sex_male'> Male </label>
+        </div>
+
+        <div>
+        <input type = "radio" id = cat_sex_F name = "cat[sex]" value = "F" <%= cat.sex == "F" ? "checked" : "" %>>
+        <label for= 'cat_sex_female'> Female </label>
+        </div>
+  
+
+    <label for= "description"> Description </label>
+    <input type='text' id='cat_descrption' name = cat[description] value = "<%= cat.description %>">  
+
+    <input type = 'submit' value='<%= 'Create cat' %>'> 
+    <%= p cat %>
+    <%= p cat.name %>
+    </form>
