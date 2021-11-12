@@ -837,3 +837,76 @@ SyntaxError - syntax error, unexpected tSTRING_BEG, expecting ')'
 
 Started POST "/__better_errors/0fd0375c3e753631/variables" for ::1 at 2021-11-12 15:42:45 -0500
 Started POST "/__better_errors/0fd0375c3e753631/variables" for ::1 at 2021-11-12 15:42:55 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:05:40 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (101.7ms)
+  Rendered cats/new.html.erb within layouts/application (223.7ms)
+Completed 500 Internal Server Error in 625ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/_form.html.erb:3:in `_app_views_cats__form_html_erb__4463989290455754410_70060200887280'
+  app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___4027066089562253274_70060192455240'
+
+Started POST "/__better_errors/494494db2cd7a8ba/variables" for ::1 at 2021-11-12 16:05:42 -0500
+Started GET "/cats/new" for ::1 at 2021-11-12 16:10:20 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (75.0ms)
+  Rendered cats/new.html.erb within layouts/application (174.8ms)
+Completed 500 Internal Server Error in 565ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/_form.html.erb:3:in `_app_views_cats__form_html_erb__4463989290455754410_70060183067600'
+  app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___4027066089562253274_70060182880180'
+
+Started POST "/__better_errors/34e55a6d98ae7ecf/variables" for ::1 at 2021-11-12 16:10:22 -0500
+Started POST "/__better_errors/34e55a6d98ae7ecf/eval" for ::1 at 2021-11-12 16:10:42 -0500
+Started POST "/__better_errors/34e55a6d98ae7ecf/eval" for ::1 at 2021-11-12 16:10:46 -0500
+Started POST "/__better_errors/34e55a6d98ae7ecf/eval" for ::1 at 2021-11-12 16:10:51 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:11:47 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 519ms (Views: 516.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:11:49 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (112.7ms)
+  Rendered cats/new.html.erb within layouts/application (256.1ms)
+Completed 500 Internal Server Error in 934ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/_form.html.erb:3:in `_app_views_cats__form_html_erb__4463989290455754410_70060189681580'
+  app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___4027066089562253274_70060189503500'
+
+Started POST "/__better_errors/fab1e9f9b88a0c74/variables" for ::1 at 2021-11-12 16:11:52 -0500
+Started GET "/cats" for ::1 at 2021-11-12 16:13:34 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/anna/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 1879ms (Views: 1665.6ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-11-12 16:13:40 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.3ms)
+  Rendered cats/new.html.erb within layouts/application (155.3ms)
+Completed 200 OK in 697ms (Views: 695.8ms | ActiveRecord: 0.0ms)
+
+
